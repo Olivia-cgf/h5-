@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 发现的列表导航 -->
+        <div class="findnav">
+            <li v-for="list in listnav" class="active">
+               <span>{{list}}</span>
+            </li>
+        </div>
+
+        <!-- 主体 -->
+        <div class="container">
+
+            <!-- 最新 -->
+            <div class="news">
+              <li class="newsList" v-for="list in newsList">
+              <a  href="smallToBig.html">
+                <img :src="list.src" alt="">
+                
+              </a>
+
+              </li>
+            </div>
+           
+         </div>
+        <!-- 底部导航 -->
+        <div id="homenav">
+            <a href="find.html">
+               <i class="iconfont icon-wode"></i>
+               <span>发现</span>
+            </a>
+            <a href="activity.html">
+               <i class="iconfont icon-wode"></i>
+               <span>活动</span>
+            </a>
+            <a href="admin.html">
+               <i class="iconfont icon-wode"></i>
+               <span>我的</span>
+            </a>
+        </div>
+    </div>
+   <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data () {
+              return {
+                message: 'hello Vue',
+                listnav: ['最新','最热','活动','活动'],
+                newsList:[
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342792785&di=3d1158e6fc467a2cb63780f24ada7587&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D2623834077%2C147223003%26fm%3D214%26gp%3D0.jpg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342792785&di=3d1158e6fc467a2cb63780f24ada7587&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D2623834077%2C147223003%26fm%3D214%26gp%3D0.jpg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=305995c6967c096675bbde6657062b19&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201411%2F21%2F20141121002512_WULGP.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=4e2cb46d7a65e4a24055125301d0175a&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201406%2F04%2F20140604092604_KiPUP.thumb.700_0.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=47d6f0e07a41977cc9094fca85fae9e6&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201509%2F13%2F20150913123656_8KYzt.thumb.700_0.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521909&di=565d94ddfdfa616eb0429917d8f0983b&imgtype=0&src=http%3A%2F%2Ff1.topitme.com%2F1%2Fed%2F14%2F1129731340b7414ed1o.jpg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342792785&di=3d1158e6fc467a2cb63780f24ada7587&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D2623834077%2C147223003%26fm%3D214%26gp%3D0.jpg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=305995c6967c096675bbde6657062b19&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201411%2F21%2F20141121002512_WULGP.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=4e2cb46d7a65e4a24055125301d0175a&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201406%2F04%2F20140604092604_KiPUP.thumb.700_0.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=47d6f0e07a41977cc9094fca85fae9e6&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201509%2F13%2F20150913123656_8KYzt.thumb.700_0.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521909&di=565d94ddfdfa616eb0429917d8f0983b&imgtype=0&src=http%3A%2F%2Ff1.topitme.com%2F1%2Fed%2F14%2F1129731340b7414ed1o.jpg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342792785&di=3d1158e6fc467a2cb63780f24ada7587&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D2623834077%2C147223003%26fm%3D214%26gp%3D0.jpg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=305995c6967c096675bbde6657062b19&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201411%2F21%2F20141121002512_WULGP.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=4e2cb46d7a65e4a24055125301d0175a&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201406%2F04%2F20140604092604_KiPUP.thumb.700_0.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521910&di=47d6f0e07a41977cc9094fca85fae9e6&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201509%2F13%2F20150913123656_8KYzt.thumb.700_0.jpeg'
+                  },
+                  {
+                    'src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506342521909&di=565d94ddfdfa616eb0429917d8f0983b&imgtype=0&src=http%3A%2F%2Ff1.topitme.com%2F1%2Fed%2F14%2F1129731340b7414ed1o.jpg'
+                  }
+                ]
+            };
+          }
+        })
+    </script>
+    <script>
+
+ window.onload = function() {
+     getSquare() ;
+ }
+
+ function getSquare() {
+   console.log(0);
+    var aImg = document.getElementsByTagName('img');
+    var oDiv = document.querySelector('.newsList');
+    var aDiv = document.querySelectorAll('.newsList');
+    
+    var MAXWIDTH = oDiv.offsetWidth;
+    var MAXHEIGHT = oDiv.offsetWidth;
+    
+    for(var i=0;i<aDiv.length;i++){
+       aDiv[i].style.height= MAXWIDTH +"px";
+    }
+    for(var i=0;i<aImg.length;i++){
+       var imgW = aImg[i].width;
+       var imgH = aImg[i].height;
+       // console.log(imgW,imgH);
+       var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, aImg[i].offsetWidth, aImg[i].offsetHeight);
+        aImg[i].width = rect.width;
+        aImg[i].height = rect.height;
+        aImg[i].style.marginLeft = -rect.left+'px';
+        aImg[i].style.marginTop = -rect.top + 'px';
+    }
+   
+}
+
+    function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+        // console.log(maxWidth, maxHeight, width, height);
+        var param = {top:0, left:0, width:width, height:height};
+        if( width>maxWidth || height>maxHeight ){
+            rate = width / height;
+            // console.log(rate);
+            if( rate > 1 ){ 
+                param.height = maxHeight;
+                param.width = Math.round(maxHeight * rate);
+                // console.log(param.height, param.width);
+            }else{
+                param.width = maxWidth;
+                param.height = Math.round(maxWidth / rate);
+                // console.log(param.height, param.width);
+            }
+        }
+        
+      param.left = Math.round((param.width - maxWidth) / 2 );
+      // console.log(param.left);
+      param.top = Math.round((param.height - maxHeight) / 2 );
+      // console.log(param.top);
+        return param;
+    }
+
+   
+</script>
+</body>
+</html>
